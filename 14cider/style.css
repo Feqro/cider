@@ -1,0 +1,129 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+:root{ 
+    --lGreen: #00a651;
+    --dGreen: #009640;
+}
+ul,li{list-style: none;}
+a{color: #222; text-decoration: none;}
+em{font-style: normal;} /* 기울림체 없애기 */
+img{
+    width: 100%;
+    display: block; /* img가 인라인요소이기 때문에 가지는 아래쪽의 공간을 없앰 */
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.history{padding-top: 200px;}
+.history_story{}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.history_title{text-align: center;}
+.history_title h2{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #222;
+}
+.history_title h2 em{
+    color: var(--lGreen);
+}
+
+.history_btn{}
+.history_btn ul{
+    width: 51%;
+    margin: 100px auto;
+}
+.history_btn ul li{ 
+    float: left; /* clearfix는 바로 위의 부모에게 줘야 돼 */
+    width: 20%;
+    margin-left: -1px; /* border가 겹치는 걸 제거해줌 */
+}
+.history_btn ul li a{
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    text-align: center; /* btn, ul, li, a 중 아무데나 주면 돼 */
+}
+.history_btn ul li.active a{
+    color: #fff;
+    background-color: var(--lGreen);
+    border-color: var(--dGreen);
+    font-weight: bold;
+}
+
+.history_slide_wrap{
+    margin-top: -100px;
+}
+.history_slide{
+    width: 100%;
+}
+.history_slide div{}
+.history_slide div img{}
+
+.history_slide .slick-arrow{
+    position: absolute;
+    z-index: 50;
+    bottom: 14px;
+    background: none;
+    font-size: 0;
+    border: none;
+}
+
+.history_slide .slick-prev{
+    left: 40%;
+}
+.history_slide .slick-prev::before{
+    content: "\f0d9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    padding: 0 20px;
+}
+/* .history_slide .slick-prev:hover::before{
+    background: var(--lGreen);
+    color: #fff;
+    font-size: 25px;
+} */
+
+
+.history_slide .slick-next{
+    right: 40%;
+}
+.history_slide .slick-next::before{
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    padding: 0 20px;
+}
+/* .history_slide .slick-next:hover::before{
+    background: var(--lGreen);
+    color: #fff;
+    font-size: 25px;
+} */
+
+.history_page{
+    position: relative;
+    z-index: 40;
+    text-align: center;
+    margin-top: -41px;
+}
+.history_page em{}
+.history_page strong{
+    color: #222;
+}
